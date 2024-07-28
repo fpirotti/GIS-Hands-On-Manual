@@ -9,7 +9,7 @@ output:
           #in_header: gtag.html
           after_body: footer.html
 documentclass: book
-description: "A guide to the `lidR` package"
+description: "dsfgsfdsd"
 ---
 
 
