@@ -1,0 +1,11 @@
+# Loading spatial layers {#io}
+
+## Spatial data {#read}
+
+Spatial data is represented digitally in many different ways. For sake of simplicity, digital spatial models are divided in **raster** and **vector** models. Raster models represent the real world basically by overlaying a grid and giving values to the grid nodes that represent, at that location, the value of the variable that we want to represent.
+
+Let's see an example: you want to digitally represent the height above sea level of an area. You can overlay (imagine) a grid over your area and decide that the grid cells are 1 meter by 1 meter in size. You will measure at the cell center (i.e. the node) the height above sea level, probably in meters. You will thus have a matrix, with RxC rows and colums respectively.
+
+Raster and vector file types
+
+Data are digitally stored in memory with different formats that correspond to files. For a nice over view of existing vector and raster common formats please check the [OGR](https://gdal.org/drivers/vector/index.html) and [GDAL](https://gdal.org/drivers/raster/index.html) drivers' websites, for vector models and raster models respectively.

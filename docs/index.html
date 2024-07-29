@@ -31,7 +31,7 @@
   
   
 
-
+<link rel="next" href="io.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -73,7 +73,16 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="#introduction"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#qgis"><i class="fa fa-check"></i><b>1.1</b> QGIS</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#r-cran"><i class="fa fa-check"></i><b>1.2</b> R CRAN</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i><b>1.3</b> License</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="io.html"><a href="io.html"><i class="fa fa-check"></i><b>2</b> Reading, Plotting, Querying &amp; Validating</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="io.html"><a href="io.html#read"><i class="fa fa-check"></i><b>2.1</b> Reading LiDAR data using <code>readLAS</code></a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -97,12 +106,26 @@
 <p class="date"><em>2024-07-28</em></p>
 </div>
 <div id="introduction" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> Introduction<a href="#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Dooo</p>
-<ul>
-<li>do things</li>
-</ul>
+<h1><span class="header-section-number">1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>There are many GIS manuals out there, both printed, online or both. This particular</p>
+<p>For this hands-one manual we will use QGIS and R. In each chapter we will see how to carry out the necessary steps to reach the aim using both approaches.</p>
+<div id="qgis" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> QGIS<a href="index.html#qgis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/clipboard-73854929.png" /> Quantum GIS is a very well known open source GIS that is available for MS Windows, Linux and MAC-OS.</p>
+<p>Please proceed at installing it HERE if necessary. It should be noted that QGIS versions change often, due to the lively developer community that keeps on improving existing modules and adding new ones. In this manual we try to use well-established modules, but it might happen that new QGIS versions change the interface or module availability. In this case please contact the author so that a new version of the manual can be created.</p>
+<p>For those savy in programming, QGIS is developed in C++, and supports Python-based QGIS plugin development.</p>
+</div>
+<div id="r-cran" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> R CRAN<a href="index.html#r-cran" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R is a very well known scripting environment with hundreds of contributed packages that make data analysis fun and somewhat easier.</p>
+<p><img src="images/clipboard-1709714373.png" /></p>
+<p>If you did not install it yet, please proceed to do so following the directions <a href="https://cran.r-project.org/">HERE</a>.</p>
+</div>
+<div id="license" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> License<a href="index.html#license" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This manual is shared under <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC-BY-NC-SA 2.0</a></p>
 
+</div>
 </div>
 <a title="Privacy-friendly Web Analytics" href="https://clicky.com/101460344"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
 <script async data-id="101460344" src="//static.getclicky.com/js"></script>
@@ -112,7 +135,7 @@
         </div>
       </div>
 
-
+<a href="io.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -154,7 +177,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["GIS-Manual.pdf", "GIS-Manual.epub"],
 "search": {
 "engine": "fuse",
 "options": null

@@ -1,1 +1,6 @@
 introduction
+io
+read
+qgis
+r-cran
+license

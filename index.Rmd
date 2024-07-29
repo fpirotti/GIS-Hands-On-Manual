@@ -1,4 +1,4 @@
---- 
+---
 title: "GIS Manual"
 author: "Francesco Pirotti"
 date: "`r Sys.Date()`"
@@ -12,9 +12,28 @@ documentclass: book
 description: "dsfgsfdsd"
 ---
 
-
 # Introduction
 
-Dooo
+There are many GIS manuals out there, both printed, online or both. This particular
 
-* do things 
+For this hands-one manual we will use QGIS and R. In each chapter we will see how to carry out the necessary steps to reach the aim using both approaches.
+
+## QGIS
+
+![](images/clipboard-73854929.png) Quantum GIS is a very well known open source GIS that is available for MS Windows, Linux and MAC-OS.
+
+Please proceed at installing it HERE if necessary. It should be noted that QGIS versions change often, due to the lively developer community that keeps on improving existing modules and adding new ones. In this manual we try to use well-established modules, but it might happen that new QGIS versions change the interface or module availability. In this case please contact the author so that a new version of the manual can be created.
+
+For those savy in programming, QGIS is developed in C++, and supports Python-based QGIS plugin development.
+
+## R CRAN
+
+R is a very well known scripting environment with hundreds of contributed packages that make data analysis fun and somewhat easier.
+
+![](images/clipboard-1709714373.png)
+
+If you did not install it yet, please proceed to do so following the directions [HERE](https://cran.r-project.org/).
+
+## License
+
+This manual is shared under [CC-BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/)
