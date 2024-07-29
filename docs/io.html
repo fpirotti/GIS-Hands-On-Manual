@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Reading, Plotting, Querying &amp; Validating | GIS Manual</title>
+  <title>2 Loading spatial layers | GIS Manual</title>
   <meta name="description" content="dsfgsfdsd" />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Reading, Plotting, Querying &amp; Validating | GIS Manual" />
+  <meta property="og:title" content="2 Loading spatial layers | GIS Manual" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="dsfgsfdsd" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Reading, Plotting, Querying &amp; Validating | GIS Manual" />
+  <meta name="twitter:title" content="2 Loading spatial layers | GIS Manual" />
   
   <meta name="twitter:description" content="dsfgsfdsd" />
   
@@ -23,14 +23,14 @@
 <meta name="author" content="Francesco Pirotti" />
 
 
-<meta name="date" content="2024-07-28" />
+<meta name="date" content="2024-07-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="io.html"/>
+<link rel="prev" href="index.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -73,14 +73,15 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="io.html"><a href="io.html"><i class="fa fa-check"></i><b>2</b> Reading, Plotting, Querying &amp; Validating</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="io.html"><a href="io.html#read"><i class="fa fa-check"></i><b>2.1</b> Reading LiDAR data using <code>readLAS</code></a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#qgis"><i class="fa fa-check"></i><b>1.1</b> QGIS</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#r-cran"><i class="fa fa-check"></i><b>1.2</b> R CRAN</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i><b>1.3</b> License</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="io.html"><a href="io.html#io"><i class="fa fa-check"></i><b>3</b> Reading, Plotting, Querying &amp; Validating</a>
+<li class="chapter" data-level="2" data-path="io.html"><a href="io.html"><i class="fa fa-check"></i><b>2</b> Loading spatial layers</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="io.html"><a href="io.html#read"><i class="fa fa-check"></i><b>3.1</b> Reading LiDAR data using <code>readLAS</code></a></li>
+<li class="chapter" data-level="2.1" data-path="io.html"><a href="io.html#read"><i class="fa fa-check"></i><b>2.1</b> Spatial data</a></li>
 </ul></li>
 </ul>
 
@@ -99,13 +100,14 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="io" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">3</span> Reading, Plotting, Querying &amp; Validating<a href="io.html#io" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="read" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Reading LiDAR data using <code>readLAS</code><a href="io.html#read" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Discrete return ALS sensors record a number of pieces of data. First and foremost, positional data in three dimensions (X,Y,Z), followed by additional information like the intensity for each point, the position of each point in the return sequence, or the beam incidence angle of each point. Reading, writing, and efficient storage of these ALS data is a critical step prior to any subsequent analysis.</p>
-<p>ALS data is most commonly distributed in LAS format, which is specifically designed to store ALS data in a standardized way. These data are officially documented and maintained by the <a href="http://www.asprs.org/wp-content/uploads/2019/07/LAS_1_4_r15.pdf">American Society for Photogrammetry &amp; Remote Sensing (ASPRS)</a>. LAS files do however require a large amount of memory because they are not compressed. The LAZ format has become the standard compression scheme, because it is free and open-source.</p>
-<p>The widespread use, standardization and open source nature of the LAS and LAZ formats promoted the development of the <code>lidR</code> package, which has been designed to process LAS and LAZ files both as input and output, taking advantage of the LASlib and LASzip C++ libraries via the <a href="https://cran.r-project.org/package=rlas"><code>rlas</code></a> package.</p>
+<div id="io" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Loading spatial layers<a href="io.html#io" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="read" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Spatial data<a href="io.html#read" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Spatial data is represented digitally in many different ways. For sake of simplicity, digital spatial models are divided in <strong>raster</strong> and <strong>vector</strong> models. Raster models represent the real world basically by overlaying a grid and giving values to the grid nodes that represent, at that location, the value of the variable that we want to represent.</p>
+<p>Let’s see an example: you want to digitally represent the height above sea level of an area. You can overlay (imagine) a grid over your area and decide that the grid cells are 1 meter by 1 meter in size. You will measure at the cell center (i.e. the node) the height above sea level, probably in meters. You will thus have a matrix, with RxC rows and colums respectively.</p>
+<p>Raster and vector file types</p>
+<p>Data are digitally stored in memory with different formats that correspond to files. For a nice over view of existing vector and raster common formats please check the <a href="https://gdal.org/drivers/vector/index.html">OGR</a> and <a href="https://gdal.org/drivers/raster/index.html">GDAL</a> drivers’ websites, for vector models and raster models respectively.</p>
 
 </div>
 </div>
@@ -116,7 +118,7 @@
           </div>
         </div>
       </div>
-<a href="io.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
