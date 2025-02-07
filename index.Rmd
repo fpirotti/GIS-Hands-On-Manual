@@ -1,5 +1,5 @@
 ---
-title: "GIS Manual"
+title: "GIS Hands-On Manual"
 author: "Francesco Pirotti"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -9,7 +9,7 @@ output:
           #in_header: gtag.html
           after_body: footer.html
 documentclass: book
-description: "dsfgsfdsd"
+description: "GIS software applications with practical examples using QGIS and R"
 ---
 
 # Introduction
@@ -20,9 +20,11 @@ For this hands-one manual we will use QGIS and R. In each chapter we will see ho
 
 ## QGIS
 
-![](images/clipboard-73854929.png) Quantum GIS is a very well known open source GIS that is available for MS Windows, Linux and MAC-OS.
+Quantum GIS is a very well known open source GIS that is available for MS Windows, Linux and MAC-OS.
 
-Please proceed at installing it HERE if necessary. It should be noted that QGIS versions change often, due to the lively developer community that keeps on improving existing modules and adding new ones. In this manual we try to use well-established modules, but it might happen that new QGIS versions change the interface or module availability. In this case please contact the author so that a new version of the manual can be created.
+![](images/clipboard-73854929.png)
+
+Please proceed at installing it [HERE](https://qgis.org/download/) if necessary. It should be noted that QGIS versions change often, due to the lively developer community that keeps on improving existing modules and adding new ones. In this manual we try to use well-established modules, but it might happen that new QGIS versions change the interface or module availability. In this case please contact the author so that a new version of the manual can be created.
 
 For those savy in programming, QGIS is developed in C++, and supports Python-based QGIS plugin development.
 

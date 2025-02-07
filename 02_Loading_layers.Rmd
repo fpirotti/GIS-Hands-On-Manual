@@ -2,7 +2,7 @@
 ---
 ---
 
-# Loading spatial layers {#io}
+# Loading spatial layers {#spatial_layers}
 
 ## Spatial data {#read}
 

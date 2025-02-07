@@ -1,0 +1,39 @@
+---
+---
+---
+
+# Styling spatial layers {#style_spatial_layers}
+
+## Style vector layers {#style_spatial_layers_vector}
+
+### Description
+
+short desc here
+
+
+### Exercises
+
+
+#### Digital elevation models
+
+
+#### UN-FAO Aridity Index
+
+
+
+
+## Style raster layers {#style_raster_layers_vector}
+
+### Description
+
+short desc here
+
+
+### Exercises
+
+#### Digital elevation models
+
+
+#### UN-FAO Aridity Index
+
+
